@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Asesoría pensional certificada para colombianos en el exterior. Analizamos tu historial laboral y te guiamos paso a paso para lograr tu pensión desde España.">
+<title>PensiónSegura Colombia — Tu pensión colombiana, desde donde estés</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#C9A84C;--gold-lt:#E8C96D;--gold-dk:#A07830;
+  --gold-10:rgba(201,168,76,0.1);--gold-20:rgba(201,168,76,0.2);--gold-30:rgba(201,168,76,0.3);
+  --navy:#070C18;--navy-2:#0D1525;--navy-3:#111E30;--navy-4:#16253A;
+  --teal:#0E7C7B;--teal-lt:#12A09F;
+  --w:#fff;--w80:rgba(255,255,255,0.8);--w60:rgba(255,255,255,0.6);
+  --w40:rgba(255,255,255,0.4);--w20:rgba(255,255,255,0.15);--w10:rgba(255,255,255,0.07);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#0a0a0a;color:var(--w);overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--navy)}::-webkit-scrollbar-thumb{background:var(--gold-dk);border-radius:3px}
+
+/* ══ TAB SWITCHER ══ */
+  position:fixed;top:0;left:0;right:0;z-index:9999;
+  background:rgba(7,12,24,0.97);border-bottom:1px solid var(--gold-20);
+  backdrop-filter:blur(20px);
+  display:flex;align-items:center;justify-content:center;
+  gap:0;height:56px;
+}
+  padding:7px 22px;font-size:13px;font-weight:600;
+  background:transparent;color:var(--w40);
+  border:none;border-radius:7px;cursor:pointer;
+  font-family:'DM Sans',sans-serif;letter-spacing:.2px;
+  transition:all .2s;white-space:nowrap;
+}
+
+
+/* ══════════════════════════════════════════
+   VARIANTE A — FINTECH PREMIUM (Stripe-style)
+══════════════════════════════════════════ */
+
+/* NAV A */
+
+/* HERO A */
+
+/* BANDS A */
+
+/* GRID A */
+
+/* ══════════════════════════════════════════
+   VARIANTE B — LUXURY CINEMATOGRÁFICO (Netflix-style)
+══════════════════════════════════════════ */
+#vb{background:var(--navy);font-family:'Syne',sans-serif}
+
+#vb .nav{display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:72px;background:rgba(7,12,24,0.92);border-bottom:1px solid var(--gold-20);position:fixed;top:0;left:0;right:0;z-index:999;backdrop-filter:blur(20px)}
+#vb .logo-b{display:flex;align-items:center;gap:10px}
+#vb .logo-gem-b{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,var(--gold),var(--gold-dk));display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--navy);font-family:'Playfair Display',serif}
+#vb .logo-text-b{font-size:17px;font-weight:700;color:var(--w);letter-spacing:-.3px}
+#vb .logo-text-b span{color:var(--gold)}
+#vb .nav-links-b a{font-size:13px;font-weight:400;color:var(--w60);text-decoration:none;margin-left:28px;transition:color .2s}
+#vb .nav-links-b a:hover{color:var(--w)}
+#vb .nav-cta-b{padding:9px 20px;font-size:13px;font-weight:700;background:var(--gold);color:var(--navy);border:none;border-radius:7px;cursor:pointer;font-family:'Syne',sans-serif;transition:all .2s}
+#vb .nav-cta-b:hover{background:var(--gold-lt);box-shadow:0 0 20px var(--gold-20)}
+
+/* HERO B — full cinematic */
+#vb .hero-b{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;padding-top:72px}
+#vb .hbg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=1800&q=85');background-size:cover;background-position:center 20%;transform:scale(1.05)}
+#vb .hgrain{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+#vb .hov1{position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,12,24,1) 0%,rgba(7,12,24,.7) 35%,rgba(7,12,24,.2) 70%,rgba(7,12,24,.4) 100%)}
+#vb .hov2{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,12,24,.95) 0%,transparent 60%)}
+#vb .hero-b-inner{position:relative;z-index:2;padding:0 64px 80px;max-width:800px}
+#vb .hpill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--gold-30);background:var(--gold-10);color:var(--gold-lt);font-size:12px;font-weight:600;padding:6px 14px;border-radius:100px;margin-bottom:28px;letter-spacing:.5px}
+#vb .hpill-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+#vb .hero-b h1{font-family:'Playfair Display',serif;font-size:72px;font-weight:800;color:var(--w);line-height:1.04;letter-spacing:-2px;margin-bottom:24px}
+#vb .hero-b h1 em{font-style:italic;color:var(--gold)}
+#vb .hero-b-sub{font-size:19px;font-weight:300;color:var(--w80);line-height:1.7;max-width:520px;margin-bottom:44px}
+#vb .hero-b-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+#vb .btn-pb{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;font-size:15px;font-weight:700;background:var(--gold);color:var(--navy);border:none;border-radius:9px;cursor:pointer;font-family:'Syne',sans-serif;transition:all .25s}
+#vb .btn-pb:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 10px 32px rgba(201,168,76,.4)}
+#vb .btn-sb{display:inline-flex;align-items:center;gap:9px;padding:15px 22px;font-size:15px;font-weight:500;background:rgba(255,255,255,.08);color:var(--w80);border:1px solid var(--w20);border-radius:9px;cursor:pointer;font-family:'Syne',sans-serif;transition:all .25s;backdrop-filter:blur(8px)}
+#vb .btn-sb:hover{border-color:var(--gold-30);color:var(--w)}
+#vb .trust-b{display:flex;gap:0;border:1px solid var(--w20);border-radius:12px;overflow:hidden;backdrop-filter:blur(10px);width:fit-content}
+#vb .tb-item{padding:16px 28px;border-right:1px solid var(--w20);background:var(--w10);display:flex;flex-direction:column;gap:3px}
+#vb .tb-item:last-child{border-right:none}
+#vb .tb-num{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--gold);letter-spacing:-.5px}
+#vb .tb-lbl{font-size:11px;color:var(--w40);font-weight:300}
+
+/* SECCIONES B */
+#vb .sec-b{padding:96px 64px;background:var(--navy)}
+#vb .sec-b-alt{padding:96px 64px;background:var(--navy-2)}
+#vb .tag-b{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+#vb .tag-b::before{content:'';width:20px;height:1px;background:var(--gold)}
+#vb .h2b{font-family:'Playfair Display',serif;font-size:46px;font-weight:700;letter-spacing:-1px;line-height:1.12;color:var(--w);margin-bottom:14px}
+#vb .h2b em{font-style:italic;color:var(--gold)}
+#vb .subb{font-size:17px;font-weight:300;color:var(--w60);line-height:1.72;max-width:520px;margin-bottom:52px}
+
+/* loss cards B — dark image */
+#vb .loss-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-radius:20px;
+  overflow:hidden;
+}
+#vb .lc{
+  position:relative;
+  height:420px;
+  overflow:hidden;
+  cursor:default;
+}
+/* Grain cinematográfico por card */
+#vb .lc::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px;
+  pointer-events:none;
+  z-index:3;
+}
+/* Separador vertical dorado entre cards */
+#vb .lc+.lc::before{
+  content:'';
+  position:absolute;
+  left:0;top:15%;bottom:15%;
+  width:1px;
+  background:linear-gradient(180deg,transparent,var(--gold-30),transparent);
+  z-index:4;
+}
+#vb .lc-img{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  filter:brightness(.22) saturate(.5) contrast(1.05);
+  transition:filter .6s ease, transform .7s ease;
+  transform:scale(1.04);
+}
+#vb .lc:hover .lc-img{
+  filter:brightness(.16) saturate(.4) contrast(1.08);
+  transform:scale(1.10);
+}
+/* Overlay: vignette + gradiente bottom */
+#vb .lc-ov{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(7,12,24,.5) 0%,transparent 65%),
+    linear-gradient(180deg,rgba(7,12,24,.2) 0%,transparent 30%,rgba(7,12,24,.75) 65%,rgba(7,12,24,.98) 100%);
+  z-index:1;
+}
+/* Reveal dorado en hover */
+#vb .lc-reveal{
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,rgba(201,168,76,.1) 0%,transparent 60%);
+  opacity:0;
+  transition:opacity .5s ease;
+  z-index:2;
+}
+#vb .lc:hover .lc-reveal{opacity:1}
+/* Borde dorado en hover — via box-shadow inset */
+#vb .lc-border{
+  position:absolute;inset:0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);
+  transition:box-shadow .4s ease;
+  z-index:4;
+}
+#vb .lc:hover .lc-border{
+  box-shadow:inset 0 0 0 1.5px rgba(201,168,76,.5),inset 0 -3px 0 0 var(--gold);
+}
+/* Contenido */
+#vb .lc-content{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:32px 28px;
+  z-index:5;
+  transform:translateY(4px);
+  transition:transform .4s ease;
+}
+#vb .lc:hover .lc-content{transform:translateY(0)}
+/* Número de secuencia */
+#vb .lc-num{
+  font-family:'Playfair Display',serif;
+  font-size:11px;font-weight:700;
+  color:var(--gold);
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+  opacity:.8;
+}
+#vb .lc-ico{font-size:0;margin-bottom:0;display:none}
+#vb .lc-t{
+  font-size:20px;font-weight:700;
+  color:var(--w);margin-bottom:10px;
+  font-family:'Playfair Display',serif;
+  line-height:1.2;
+  letter-spacing:-.3px;
+}
+#vb .lc-d{
+  font-size:13px;color:var(--w60);
+  line-height:1.6;font-weight:300;
+  max-width:240px;
+  opacity:0;
+  transform:translateY(6px);
+  transition:opacity .4s ease .05s, transform .4s ease .05s;
+}
+#vb .lc:hover .lc-d{opacity:1;transform:translateY(0)}
+/* Línea decorativa bajo título */
+#vb .lc-line{
+  width:0;height:1.5px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+  margin-bottom:10px;
+  transition:width .5s ease;
+}
+#vb .lc:hover .lc-line{width:40px}
+
+#vb .met-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--w20);border-radius:14px;overflow:hidden}
+#vb .met-card{background:var(--navy-3);padding:36px 28px;display:flex;flex-direction:column;gap:4px}
+#vb .met-n{font-family:'Playfair Display',serif;font-size:48px;font-weight:800;color:var(--gold);letter-spacing:-1px;line-height:1}
+#vb .met-l{font-size:13px;color:var(--w60);font-weight:300;margin-top:4px}
+
+#vb .ben-grid-b{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#vb .ben-b{display:flex;gap:16px;align-items:flex-start;padding:26px 22px;border-radius:14px;background:var(--navy-3);border:1px solid var(--w20);transition:all .25s}
+#vb .ben-b:hover{border-color:var(--gold-30);background:var(--navy-4)}
+#vb .ben-b-ico{width:36px;height:36px;border-radius:9px;background:var(--gold-10);border:1px solid var(--gold-30);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;margin-top:2px}
+#vb .ben-b-t{font-size:15px;font-weight:700;color:var(--w);margin-bottom:5px}
+#vb .ben-b-d{font-size:13px;color:var(--w60);line-height:1.55;font-weight:300}
+
+/* proof B */
+#vb .proof-grid-b{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+#vb .pc-b{padding:28px 24px;border-radius:14px;background:var(--navy-3);border:1px solid var(--w20)}
+#vb .stars-b{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:14px}
+#vb .pc-b-txt{font-size:14px;font-weight:300;color:var(--w80);line-height:1.72;margin-bottom:20px;border-left:2px solid var(--gold-30);padding-left:14px;font-style:italic}
+#vb .pc-b-nm{font-size:13px;font-weight:700;color:var(--w)}
+#vb .pc-b-ci{font-size:12px;color:var(--w40)}
+/* case highlight */
+#vb .case-hl{display:grid;grid-template-columns:1fr 1fr;border-radius:18px;overflow:hidden;border:1px solid var(--w20)}
+#vb .case-hl-img{position:relative;min-height:280px}
+#vb .case-hl-ibg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=80');background-size:cover;background-position:center top;filter:brightness(.4) saturate(.6)}
+#vb .case-hl-iov{position:absolute;inset:0;background:linear-gradient(90deg,transparent 50%,var(--navy-3) 100%)}
+#vb .case-hl-txt{background:var(--navy-3);padding:44px 40px;display:flex;flex-direction:column;justify-content:center}
+#vb .case-label-b{font-size:10px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+#vb .case-quote-b{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;font-style:italic;color:var(--w);line-height:1.5;margin-bottom:24px}
+#vb .case-meta-b{font-size:13px;color:var(--w60);font-weight:300}
+#vb .case-meta-b strong{color:var(--w);font-weight:600}
+#vb .case-res{display:flex;gap:24px;margin-top:22px}
+#vb .cr-n{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold);display:block}
+#vb .cr-l{font-size:11px;color:var(--w40)}
+
+/* steps B */
+#vb .steps-b{display:flex;flex-direction:column;max-width:760px}
+#vb .step-b{display:flex;gap:24px;padding:28px 0;border-bottom:1px solid var(--w20);align-items:flex-start}
+#vb .step-b:last-child{border-bottom:none}
+#vb .sn-b{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dk));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);flex-shrink:0}
+#vb .st-b{font-size:16px;font-weight:700;color:var(--w);margin-bottom:5px}
+#vb .sd-b{font-size:13.5px;color:var(--w60);line-height:1.6;font-weight:300}
+
+/* estimador B */
+#vb .est-b{background:var(--navy-3);border:1px solid var(--w20);border-radius:20px;padding:52px 56px;max-width:760px;margin:0 auto;position:relative;overflow:hidden}
+#vb .est-b::before{content:'';position:absolute;top:-120px;right:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,var(--gold-10),transparent 70%);pointer-events:none}
+#vb .est-title-b{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--w);margin-bottom:8px;letter-spacing:-.5px}
+#vb .est-sub-b{font-size:15px;color:var(--w60);margin-bottom:40px;font-weight:300}
+#vb .est-range{width:100%;height:4px;-webkit-appearance:none;appearance:none;background:var(--w20);border-radius:2px;cursor:pointer}
+#vb .est-range::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--gold);cursor:pointer;box-shadow:0 0 0 4px var(--gold-20)}
+#vb .est-lbl{font-size:13px;font-weight:500;color:var(--w80);margin-bottom:8px}
+#vb .est-row{margin-bottom:24px}
+#vb .est-result-b{background:var(--gold-10);border:1px solid var(--gold-30);border-radius:12px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+#vb .est-rt{font-size:14px;color:var(--w80)}
+#vb .est-rn{font-family:'Playfair Display',serif;font-size:32px;font-weight:800;color:var(--gold)}
+
+/* svc B */
+#vb .svc-grid-b{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+#vb .svc-b{padding:28px 22px;border-radius:14px;background:var(--navy);border:1px solid var(--w20);transition:all .25s;cursor:default}
+#vb .svc-b:hover{border-color:var(--gold-30);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+#vb .svc-b-ico{width:44px;height:44px;border-radius:10px;background:var(--gold-10);border:1px solid var(--gold-20);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px}
+#vb .svc-b-t{font-size:15px;font-weight:700;color:var(--w);margin-bottom:7px}
+#vb .svc-b-d{font-size:13px;color:var(--w60);line-height:1.55;font-weight:300}
+
+/* faq B */
+#vb .faq-list-b{max-width:760px;display:flex;flex-direction:column}
+#vb .faq-b{border-bottom:1px solid var(--w20);padding:26px 0;cursor:pointer}
+#vb .faq-b:last-child{border-bottom:none}
+#vb .faq-qb{font-size:16px;font-weight:600;color:var(--w);display:flex;align-items:flex-start;gap:14px}
+#vb .faq-qb-ico{width:26px;height:26px;border-radius:50%;background:var(--gold-10);border:1px solid var(--gold-30);color:var(--gold);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+#vb .faq-ab{font-size:14px;color:var(--w60);line-height:1.72;font-weight:300;padding-left:40px;display:none;margin-top:12px}
+#vb .faq-b.open .faq-ab{display:block}
+#vb .faq-b.open .faq-qb{color:var(--gold)}
+
+/* exterior split B */
+#vb .ext-split{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;overflow:hidden;min-height:520px}
+#vb .ext-left-b{padding:80px 64px;display:flex;flex-direction:column;justify-content:center;background:var(--navy);position:relative;z-index:2}
+#vb .ext-right-b{position:relative}
+#vb .ext-rbg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=900&q=80');background-size:cover;background-position:center;filter:brightness(.22) saturate(.5)}
+#vb .ext-rov{position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,transparent 50%)}
+#vb .ext-cases-b{position:absolute;bottom:40px;right:40px;z-index:2;display:flex;flex-direction:column;gap:10px}
+#vb .ext-case-b{background:rgba(7,12,24,.88);border:1px solid var(--gold-30);border-radius:12px;padding:16px 20px;backdrop-filter:blur(12px);min-width:220px}
+#vb .ext-ctag{font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
+#vb .ext-cnm{font-size:14px;font-weight:600;color:var(--w);margin-bottom:3px}
+#vb .ext-cdt{font-size:12px;color:var(--w60)}
+#vb .ext-items-b{display:flex;flex-direction:column;gap:10px;margin-top:30px}
+#vb .ext-item-b{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:9px;background:var(--w10);border:1px solid var(--w20);font-size:14px;color:var(--w80)}
+#vb .ext-ic{color:var(--gold);font-size:18px;flex-shrink:0}
+
+/* CTA final B */
+#vb .cta-fin-b{position:relative;overflow:hidden;padding:140px 64px;text-align:center}
+#vb .cta-fin-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80');background-size:cover;background-position:center;filter:brightness(.12) saturate(.4)}
+#vb .cta-fin-ov{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(14,124,123,.15) 0%,transparent 70%)}
+#vb .cta-fin-ov2{position:absolute;inset:0;background:linear-gradient(180deg,var(--navy) 0%,transparent 20%,transparent 80%,var(--navy) 100%)}
+#vb .cta-fin-inner{position:relative;z-index:2}
+#vb .cta-fin-inner h2{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--w);letter-spacing:-1.5px;margin-bottom:20px;letter-spacing:-1px}
+#vb .cta-fin-inner h2 em{font-style:italic;color:var(--gold)}
+#vb .cta-fin-inner p{font-size:18px;color:var(--w60);max-width:480px;margin:0 auto 48px;font-weight:300;line-height:1.7}
+#vb .cta-fin-note{font-size:12px;color:var(--w40);margin-top:20px;letter-spacing:.3px}
+
+#vb footer{background:var(--navy-2);border-top:1px solid var(--gold-20);padding:64px 64px 40px}
+#vb .fb-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:52px;margin-bottom:48px}
+#vb .fb-brand{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--w);margin-bottom:10px}
+#vb .fb-brand span{color:var(--gold)}
+#vb .fb-desc{font-size:13px;color:var(--w40);line-height:1.7;font-weight:300;max-width:250px;margin-bottom:20px}
+#vb .fb-ch{font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+#vb .fb-links{display:flex;flex-direction:column;gap:9px}
+#vb .fb-links a{font-size:13px;color:var(--w40);text-decoration:none;font-weight:300;transition:color .2s}
+#vb .fb-links a:hover{color:var(--gold)}
+#vb .fb-bot{border-top:1px solid var(--w20);padding-top:24px;display:flex;justify-content:space-between;align-items:center}
+#vb .fb-bot p{font-size:12px;color:var(--w40);font-weight:300}
+#vb .fb-bot-links{display:flex;gap:20px}
+#vb .fb-bot-links a{font-size:12px;color:var(--w40);text-decoration:none}
+
+/* ══ CENTRADO SECCIONES VB ══ */
+#vb .sec-centered{text-align:center}
+#vb .sec-centered .tag-b{justify-content:center}
+#vb .sec-centered .h2b{max-width:700px;margin-left:auto;margin-right:auto}
+#vb .sec-centered .subb{margin-left:auto;margin-right:auto;max-width:580px}
+#vb .sec-centered .faq-list-b{margin:0 auto}
+#vb .sec-centered .steps-b{margin:0 auto}
+
+#vb .sec-centered .svc-b-ico{margin-left:auto;margin-right:auto}
+#vb .sec-centered .svc-b{text-align:center}
+#vb .sec-centered .svc-b-ico{margin-bottom:18px}
+#vb .sec-centered .ben-grid-b{max-width:900px;margin:0 auto}
+#vb .sec-centered .proof-grid-b{max-width:100%}
+#vb .sec-centered .svc-grid-b{max-width:100%}
+#vb .sec-centered .steps-b{max-width:760px;text-align:left}
+#vb .sec-centered .faq-list-b{text-align:left}
+#vb .sec-centered .pc-b-txt{text-align:left}
+
+
+/* ══ RESPONSIVE VB ══ */
+
+/* Tablet ≤ 960px */
+@media(max-width:960px){
+  #vb .nav{padding:0 32px}
+  #vb .nav-links-b{display:none}
+  #vb .hero-b-inner{padding:0 32px 64px;max-width:100%}
+  #vb .hero-b h1{font-size:52px;letter-spacing:-1.2px}
+  #vb .hero-b-sub{font-size:16px}
+  #vb .trust-b{flex-wrap:wrap;width:100%}
+  #vb .tb-item{flex:1 1 40%;border-bottom:1px solid var(--w20)}
+  #vb .tb-item:last-child{border-right:none}
+  #vb .loss-grid{grid-template-columns:1fr 1fr;border-radius:16px;gap:0}
+  #vb .lc{height:320px}
+  #vb .lc+.lc::before{display:none}
+  #vb .lc:nth-child(3)::before{display:none}
+  #vb .met-grid{grid-template-columns:1fr 1fr}
+  #vb .ben-grid-b{grid-template-columns:1fr}
+  #vb .proof-grid-b{grid-template-columns:1fr 1fr}
+  #vb .case-hl{grid-template-columns:1fr}
+  #vb .case-hl-img{min-height:200px}
+  #vb .steps-b{max-width:100%}
+  #vb .svc-grid-b{grid-template-columns:1fr 1fr}
+  #vb .faq-list-b{max-width:100%}
+  #vb .ext-split{grid-template-columns:1fr;min-height:auto}
+  #vb .ext-right-b{min-height:320px}
+  #vb .ext-cases-b{position:static;flex-direction:row;flex-wrap:wrap;padding:24px;gap:10px}
+  #vb .ext-case-b{min-width:0;flex:1 1 200px}
+  #vb .ext-left-b{padding:64px 32px}
+  #vb .sec-b{padding:72px 32px}
+  #vb .sec-b-alt{padding:72px 32px}
+  #vb .est-b{padding:40px 32px}
+  #vb footer{padding:48px 32px 32px}
+  #vb .fb-grid{grid-template-columns:1fr 1fr;gap:32px}
+  #vb .cta-fin-b{padding:100px 32px}
+  #vb .cta-fin-inner h2{font-size:38px}
+  #vb .h2b{font-size:36px}
+}
+
+/* Mobile ≤ 600px */
+@media(max-width:600px){
+  #vb .nav{padding:0 20px;height:60px}
+  #vb .nav-cta-b{padding:8px 14px;font-size:12px}
+  #vb .hero-b{min-height:100svh;align-items:flex-end}
+  #vb .hero-b-inner{padding:0 20px 48px;max-width:100%}
+  #vb .hero-b h1{font-size:36px;letter-spacing:-.8px;line-height:1.1}
+  #vb .hero-b-sub{font-size:15px;max-width:100%}
+  #vb .hero-b-btns{flex-direction:column;gap:10px}
+  #vb .btn-pb,#vb .btn-sb{width:100%;justify-content:center;font-size:14px;padding:13px 20px}
+  #vb .trust-b{flex-direction:column;width:100%;border-radius:10px}
+  #vb .tb-item{width:100%;flex-direction:row;align-items:center;justify-content:space-between;border-right:none;border-bottom:1px solid var(--w20);padding:12px 18px}
+  #vb .tb-item:last-child{border-bottom:none}
+  #vb .tb-num{font-size:22px}
+  #vb .hpill{font-size:11px;padding:5px 12px}
+  #vb .sec-b{padding:56px 20px}
+  #vb .sec-b-alt{padding:56px 20px}
+  #vb .h2b{font-size:30px;letter-spacing:-.6px}
+  #vb .subb{font-size:15px}
+  #vb .loss-grid{grid-template-columns:1fr;border-radius:14px;gap:0}
+  #vb .lc{height:280px}
+  #vb .lc+.lc::before{display:none}
+  #vb .lc-d{opacity:1;transform:translateY(0)}
+  #vb .lc-line{width:32px}
+  #vb .met-grid{grid-template-columns:1fr 1fr;border-radius:10px}
+  #vb .met-n{font-size:36px}
+  #vb .met-card{padding:24px 16px}
+  #vb .ben-grid-b{grid-template-columns:1fr}
+  #vb .proof-grid-b{grid-template-columns:1fr}
+  #vb .case-hl{grid-template-columns:1fr}
+  #vb .case-hl-txt{padding:28px 24px}
+  #vb .case-quote-b{font-size:18px}
+  #vb .case-res{gap:14px}
+  #vb .cr-n{font-size:22px}
+  #vb .svc-grid-b{grid-template-columns:1fr}
+  #vb .faq-list-b{max-width:100%}
+  #vb .faq-qb{font-size:14px}
+  #vb .ext-split{grid-template-columns:1fr}
+  #vb .ext-left-b{padding:48px 20px}
+  #vb .ext-right-b{min-height:260px}
+  #vb .ext-cases-b{position:static;padding:20px;flex-direction:column}
+  #vb .ext-case-b{min-width:0;width:100%}
+  #vb .ext-items-b{gap:8px}
+  #vb .ext-item-b{font-size:13px;padding:10px 14px}
+  #vb .est-b{padding:32px 20px;border-radius:14px}
+  #vb .est-title-b{font-size:24px}
+  #vb .est-result-b{flex-direction:column;gap:8px;text-align:center}
+  #vb .cta-fin-b{padding:80px 20px}
+  #vb .cta-fin-inner h2{font-size:30px;letter-spacing:-.5px}
+  #vb .cta-fin-inner p{font-size:15px}
+  #vb footer{padding:40px 20px 28px}
+  #vb .fb-grid{grid-template-columns:1fr;gap:28px}
+  #vb .fb-bot{flex-direction:column;gap:12px;text-align:center}
+  #vb .hov2{display:none}
+  #vb .loss-grid{padding:0}
+}
+
+/* ══════════════════════════════════════════
+   VARIANTE C — CONVERSACIONAL IA-FIRST
+══════════════════════════════════════════ */
+
+
+/* HERO C — split layout + chat window */
+
+/* CHAT WINDOW */
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+/* SECCIONES C */
+
+/* loss cards C */
+
+/* ben c */
+
+/* steps c — horizontal */
+
+/* svc c */
+
+/* proof c */
+
+/* estimador c */
+
+/* faq c */
+
+/* exterior c */
+
+/* cta final c */
+
+
+/* ── WA FLOAT (global) ── */
+.wa-wrap{position:fixed;bottom:28px;right:28px;z-index:9998;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.wa-popup{background:#fff;border-radius:12px;padding:14px 16px;width:215px;box-shadow:0 8px 30px rgba(0,0,0,.2);position:relative}
+.wa-popup h4{font-size:13px;font-weight:700;color:#111;margin-bottom:3px;font-family:'DM Sans',sans-serif}
+.wa-popup p{font-size:12px;color:#777;line-height:1.45;font-family:'DM Sans',sans-serif}
+.wa-popup-x{position:absolute;top:9px;right:12px;background:none;border:none;cursor:pointer;font-size:14px;color:#aaa;line-height:1}
+.wa-btn{width:52px;height:52px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.45);transition:transform .2s}
+.wa-btn:hover{transform:scale(1.1)}
+.wa-btn svg{width:25px;height:25px;fill:#fff}
+
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+</style>
+</head>
+<body>
+
+<div id="vb">
+  <nav class="nav">
+    <div class="logo-b"><div class="logo-gem-b">PS</div><div class="logo-text-b">Pensión<span>Segura</span></div></div>
+    <div class="nav-links-b"><a href="#">Servicios</a><a href="#">Proceso</a><a href="#">Testimonios</a><a href="#">Contacto</a></div>
+    <button class="nav-cta-b" onclick="openModal()">Consulta Ahora</button>
+  </nav>
+
+  <section class="hero-b">
+    <div class="hbg" id="hbgB"></div>
+    <div class="hgrain"></div>
+    <div class="hov1"></div>
+    <div class="hov2"></div>
+    <div class="hero-b-inner">
+      <div class="hpill"><span class="hpill-dot"></span>Asesoría pensional certificada · Colombia · Exterior</div>
+      <h1>Descubre si puedes<br>pensionarte en<br>Colombia, <em>incluso<br>viviendo en España</em></h1>
+      <p class="hero-b-sub">Analizamos tu historial laboral, te decimos cuánto podrías recibir y te guiamos paso a paso para lograr tu pensión sin errores.</p>
+      <div class="hero-b-btns">
+        <button class="btn-pb" onclick="openModal()">🔍 Evaluar mi pensión ahora</button>
+        <button class="btn-sb" onclick="openWhatsApp()">💬 Hablar por WhatsApp</button>
+      </div>
+      <div class="trust-b">
+        <div class="tb-item"><span class="tb-num">+5.000</span><span class="tb-lbl">Colombianos asesorados</span></div>
+        <div class="tb-item"><span class="tb-num">+20</span><span class="tb-lbl">Años de experiencia</span></div>
+        <div class="tb-item"><span class="tb-num">98%</span><span class="tb-lbl">Satisfacción</span></div>
+        <div class="tb-item"><span class="tb-num">100%</span><span class="tb-lbl">Remoto</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sec-b-alt" style="padding:0">
+    <div class="met-grid">
+      <div class="met-card"><span class="met-n">+200</span><span class="met-l">Semanas recuperadas en promedio</span></div>
+      <div class="met-card"><span class="met-n">87%</span><span class="met-l">Tasa de éxito en negaciones revertidas</span></div>
+      <div class="met-card"><span class="met-n">6m</span><span class="met-l">Tiempo promedio de gestión completa</span></div>
+      <div class="met-card"><span class="met-n">+20</span><span class="met-l">Países desde donde atendemos</span></div>
+    </div>
+  </div>
+
+  <section class="sec-b sec-centered">
+    <div class="tag-b">Lo que pierdes</div>
+    <div class="h2b">Cada año sin revisar<br><em>puede costarte mucho</em></div>
+    <p class="subb">Miles de colombianos tienen semanas perdidas, errores en su historial o pensiones negadas — sin saberlo.</p>
+  </section>
+  <div style="padding:0 64px 96px;background:var(--navy)">
+    <div class="loss-grid">
+
+      <!-- 01 · Semanas no reportadas: persona revisando nómina/documentos laborales nocturnos -->
+      <div class="lc">
+        <div class="lc-img" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=90')"></div>
+        <div class="lc-ov"></div>
+        <div class="lc-reveal"></div>
+        <div class="lc-border"></div>
+        <div class="lc-content">
+          <div class="lc-num">01 — Semanas perdidas</div>
+          <div class="lc-t">Semanas no reportadas</div>
+          <div class="lc-line"></div>
+          <div class="lc-d">Fondos y Colpensiones cometen errores de registro. Pierdes años reales de cotización sin siquiera saberlo.</div>
+        </div>
+      </div>
+
+      <!-- 02 · Historia laboral errada: archivos y expedientes de oficina -->
+      <div class="lc">
+        <div class="lc-img" style="background-image:url('https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=1200&q=90')"></div>
+        <div class="lc-ov"></div>
+        <div class="lc-reveal"></div>
+        <div class="lc-border"></div>
+        <div class="lc-content">
+          <div class="lc-num">02 — Errores documentales</div>
+          <div class="lc-t">Historia laboral errada</div>
+          <div class="lc-line"></div>
+          <div class="lc-d">Traslados mal procesados, empleadores que no reportaron. Errores que bloquean tu pensión legítima.</div>
+        </div>
+      </div>
+
+      <!-- 03 · Negaciones injustas: sello de rechazo, burocracia legal -->
+      <div class="lc">
+        <div class="lc-img" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=90')"></div>
+        <div class="lc-ov"></div>
+        <div class="lc-reveal"></div>
+        <div class="lc-border"></div>
+        <div class="lc-content">
+          <div class="lc-num">03 — Derechos bloqueados</div>
+          <div class="lc-t">Negaciones injustas</div>
+          <div class="lc-line"></div>
+          <div class="lc-d">La mayoría de pensiones negadas pueden revertirse. Pero el tiempo corre y los plazos tienen límite.</div>
+        </div>
+      </div>
+
+      <!-- 04 · Aportes no reconocidos: monedas, billetes, dinero -->
+      <div class="lc">
+        <div class="lc-img" style="background-image:url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=90')"></div>
+        <div class="lc-ov"></div>
+        <div class="lc-reveal"></div>
+        <div class="lc-border"></div>
+        <div class="lc-content">
+          <div class="lc-num">04 — Dinero invisible</div>
+          <div class="lc-t">Aportes no reconocidos</div>
+          <div class="lc-line"></div>
+          <div class="lc-d">Dinero cotizado durante años que no aparece en tu registro oficial. Es recuperable si actúas a tiempo.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="sec-b-alt sec-centered">
+    <div class="tag-b">Qué obtienes</div>
+    <div class="h2b">Claridad total sobre<br>tu <em>situación pensional</em></div>
+    <p class="subb">Un diagnóstico completo y un plan de acción concreto. Sin incertidumbre, sin rodeos.</p>
+    <div class="ben-grid-b">
+      <div class="ben-b"><div class="ben-b-ico">🔎</div><div><div class="ben-b-t">Diagnóstico pensional</div><div class="ben-b-d">Revisión completa de semanas, fondo actual, opciones y riesgos identificados.</div></div></div>
+      <div class="ben-b"><div class="ben-b-ico">📊</div><div><div class="ben-b-t">Proyección de pensión mensual</div><div class="ben-b-d">Cálculo estimado de cuánto recibirías y fecha de reconocimiento según tu historial.</div></div></div>
+      <div class="ben-b"><div class="ben-b-ico">📋</div><div><div class="ben-b-t">Plan de acción personalizado</div><div class="ben-b-d">Pasos exactos, plazos y responsabilidades para corregir errores y lograr el reconocimiento.</div></div></div>
+      <div class="ben-b"><div class="ben-b-ico">⚖️</div><div><div class="ben-b-t">Acompañamiento legal completo</div><div class="ben-b-d">Gestión ante Colpensiones y fondos con representación. Hasta el reconocimiento final.</div></div></div>
+    </div>
+  </section>
+
+  <section class="sec-b sec-centered">
+    <div class="tag-b">Testimonios</div>
+    <div class="h2b">Colombianos que ya<br><em>aseguraron su pensión</em></div>
+    <p class="subb">Más de 5.000 familias en el exterior ya tienen su pensión con nuestro acompañamiento.</p>
+    <div class="proof-grid-b">
+      <div class="pc-b"><div class="stars-b">★★★★★</div><div class="pc-b-txt">"Llevaba 3 años creyendo que no podía pensionarme. Encontraron 200 semanas perdidas. Hoy recibo mi pensión desde Barcelona."</div><div class="pc-b-nm">Carlos M.</div><div class="pc-b-ci">Barcelona, España · 2023</div></div>
+      <div class="pc-b"><div class="stars-b">★★★★★</div><div class="pc-b-txt">"Todo remoto desde Madrid. En 6 meses aprobaron mi pensión sin volver a Colombia un solo día."</div><div class="pc-b-nm">Martha L.</div><div class="pc-b-ci">Madrid, España · 2023</div></div>
+      <div class="pc-b"><div class="stars-b">★★★★★</div><div class="pc-b-txt">"Negada dos veces antes. Encontraron el error del fondo y revertimos todo en 4 meses."</div><div class="pc-b-nm">Ricardo A.</div><div class="pc-b-ci">Valencia, España · 2024</div></div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="case-hl">
+        <div class="case-hl-img"><div class="case-hl-ibg"></div><div class="case-hl-iov"></div></div>
+        <div class="case-hl-txt">
+          <div class="case-label-b">Caso destacado</div>
+          <div class="case-quote-b">"Nunca pensé que desde Berlín podría gestionar mi pensión colombiana. En 7 meses lo logramos completamente en remoto."</div>
+          <div class="case-meta-b"><strong>Ana P.</strong> — Berlín, Alemania · Ingeniera, 52 años</div>
+          <div class="case-res">
+            <div><span class="cr-n">340</span><span class="cr-l">Semanas recuperadas</span></div>
+            <div><span class="cr-n">7m</span><span class="cr-l">Tiempo total</span></div>
+            <div><span class="cr-n">100%</span><span class="cr-l">Remoto</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-b-alt sec-centered">
+    <div class="tag-b">Cómo funciona</div>
+    <div class="h2b">Del diagnóstico al resultado<br>en <em>5 pasos claros</em></div>
+    <p class="subb">Un proceso transparente, completamente remoto, diseñado para colombianos en el exterior.</p>
+    <div class="steps-b">
+      <div class="step-b"><div class="sn-b">1</div><div><div class="st-b">Consulta inicial gratuita</div><div class="sd-b">En 15 minutos evaluamos tu caso. Sin compromiso.</div></div></div>
+      <div class="step-b"><div class="sn-b">2</div><div><div class="st-b">Estudio personalizado</div><div class="sd-b">Revisamos semanas, fondos y períodos. Análisis completo.</div></div></div>
+      <div class="step-b"><div class="sn-b">3</div><div><div class="st-b">Plan de acción concreto</div><div class="sd-b">Pasos exactos y estimaciones reales de monto y tiempo.</div></div></div>
+      <div class="step-b"><div class="sn-b">4</div><div><div class="st-b">Gestión y correcciones</div><div class="sd-b">Tramitamos ante Colpensiones y fondos por ti, con poder de representación.</div></div></div>
+      <div class="step-b"><div class="sn-b">5</div><div><div class="st-b">Reconocimiento y cobro</div><div class="sd-b">Acompañamiento hasta que tu pensión sea reconocida y la empieces a cobrar.</div></div></div>
+    </div>
+  </section>
+
+  <section class="sec-b" style="padding-top:80px;padding-bottom:80px">
+    <div class="tag-b" style="justify-content:center;margin-bottom:12px">Estimador rápido</div>
+    <div class="est-b">
+      <div class="est-title-b">¿Cuánto podría ser tu pensión?</div>
+      <div class="est-sub-b">Mueve los controles para ver una estimación aproximada según tu historial.</div>
+      <div class="est-row"><div class="est-lbl">Años cotizados en Colombia: <span id="byVal" style="color:var(--gold);font-weight:700">15</span></div><input type="range" class="est-range" min="5" max="35" value="15" id="byRange" oninput="calcB()"></div>
+      <div class="est-row"><div class="est-lbl">Salario promedio: <span id="bsVal" style="color:var(--gold);font-weight:700">$2.000.000</span></div><input type="range" class="est-range" min="1" max="10" value="4" id="bsRange" oninput="calcB()"></div>
+      <div class="est-result-b"><div class="est-rt">Tu pensión mensual estimada podría ser:</div><div class="est-rn" id="bResult">$1.380.000</div></div>
+      <button class="btn-pb" style="width:100%;justify-content:center" onclick="openModal()">Obtener mi diagnóstico real →</button>
+      <div style="font-size:12px;color:var(--w40);margin-top:12px;text-align:center">Estimación orientativa. El diagnóstico real puede revelar semanas adicionales no contabilizadas.</div>
+    </div>
+  </section>
+
+  <section class="sec-b-alt sec-centered">
+    <div class="tag-b">Nuestros servicios</div>
+    <div class="h2b">Todo lo que necesitas para<br><em>asegurar tu pensión</em></div>
+    <p class="subb">Soluciones especializadas para cada situación, gestionadas 100% en remoto.</p>
+    <div class="svc-grid-b">
+      <div class="svc-b"><div class="svc-b-ico">🔍</div><div class="svc-b-t">Diagnóstico Pensional</div><div class="svc-b-d">Revisión completa de tu estado en Colpensiones y fondos. Oportunidades y riesgos.</div></div>
+      <div class="svc-b"><div class="svc-b-ico">🔧</div><div class="svc-b-t">Corrección de Historia</div><div class="svc-b-d">Recuperación de semanas perdidas y corrección de errores en tu registro laboral.</div></div>
+      <div class="svc-b"><div class="svc-b-ico">⚖️</div><div class="svc-b-t">Reclamación</div><div class="svc-b-d">Gestión de pensiones negadas con argumentos legales y seguimiento completo.</div></div>
+      <div class="svc-b"><div class="svc-b-ico">🔄</div><div class="svc-b-t">Traslado de Fondo</div><div class="svc-b-d">Asesoría y gestión del traslado entre fondos privados y Colpensiones.</div></div>
+    </div>
+  </section>
+
+  <section class="sec-b sec-centered">
+    <div class="tag-b">Preguntas frecuentes</div>
+    <div class="h2b">Las dudas más comunes<br><em>resueltas claramente</em></div>
+    <div class="faq-list-b">
+      <div class="faq-b open" onclick="faqToggle(this,'b')"><div class="faq-qb"><span class="faq-qb-ico">?</span>Ya me dijeron que no puedo pensionarme</div><div class="faq-ab">La mayoría de negativas son errores administrativos. Hemos revertido cientos de casos que parecían imposibles. Un diagnóstico profesional puede cambiar ese resultado completamente.</div></div>
+      <div class="faq-b" onclick="faqToggle(this,'b')"><div class="faq-qb"><span class="faq-qb-ico">?</span>Estoy en el exterior, ¿esto es muy complicado?</div><div class="faq-ab">Para ti, no. Todo el proceso es 100% remoto: documentos digitales, videollamadas, gestión con poder de representación. Nunca necesitas volver a Colombia.</div></div>
+      <div class="faq-b" onclick="faqToggle(this,'b')"><div class="faq-qb"><span class="faq-qb-ico">?</span>¿Cuánto cuesta y vale la pena?</div><div class="faq-ab">La consulta inicial es gratuita. Una pensión representa ingresos por 20+ años — la inversión se recupera en el primer mes de reconocimiento.</div></div>
+    </div>
+  </section>
+
+  <div class="ext-split">
+    <div class="ext-left-b">
+      <div class="tag-b">Para colombianos en el exterior</div>
+      <div class="h2b">Vives en España.<br>Tu pensión es<br><em>en Colombia.</em></div>
+      <p style="font-size:16px;color:var(--w60);line-height:1.72;font-weight:300">Eso no es un problema. Es nuestra especialidad. Gestionamos todo en remoto, sin que necesites desplazarte.</p>
+      <div class="ext-items-b">
+        <div class="ext-item-b"><span class="ext-ic">📹</span>Reuniones por videollamada y WhatsApp</div>
+        <div class="ext-item-b"><span class="ext-ic">📄</span>Documentos digitales, sin desplazamientos</div>
+        <div class="ext-item-b"><span class="ext-ic">📝</span>Poder notarial remoto gestionado por nosotros</div>
+        <div class="ext-item-b"><span class="ext-ic">🌍</span>Atendemos desde cualquier país del mundo</div>
+      </div>
+    </div>
+    <div class="ext-right-b">
+      <div class="ext-rbg"></div>
+      <div class="ext-rov"></div>
+      <div class="ext-cases-b">
+        <div class="ext-case-b"><div class="ext-ctag">Caso real</div><div class="ext-cnm">Martha L. — Madrid, España</div><div class="ext-cdt">6 meses · 100% remoto · Pensión aprobada ✓</div></div>
+        <div class="ext-case-b"><div class="ext-ctag">Caso real</div><div class="ext-cnm">Carlos M. — Barcelona, España</div><div class="ext-cdt">200 semanas recuperadas · Pensión activa ✓</div></div>
+        <div class="ext-case-b"><div class="ext-ctag">Caso real</div><div class="ext-cnm">Ana P. — Berlín, Alemania</div><div class="ext-cdt">340 semanas · 7 meses · Reconocimiento total ✓</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-fin-b">
+    <div class="cta-fin-bg"></div><div class="cta-fin-ov"></div><div class="cta-fin-ov2"></div>
+    <div class="cta-fin-inner">
+      <div class="tag-b" style="justify-content:center">Actúa hoy</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--w);letter-spacing:-1px;margin-bottom:20px">Tu pensión colombiana<br><em style="font-style:italic;color:var(--gold)">te está esperando</em></h2>
+      <p style="font-size:18px;color:var(--w60);max-width:480px;margin:0 auto 48px;font-weight:300;line-height:1.7">Miles de colombianos en España ya aseguraron la suya. No dejes pasar otro año.</p>
+      <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
+        <button class="btn-pb" style="font-size:16px;padding:16px 32px" onclick="openModal()">🔍 Evaluar mi pensión ahora</button>
+        <button class="btn-sb" style="font-size:16px;padding:16px 28px" onclick="openWhatsApp()">💬 WhatsApp</button>
+      </div>
+      <div class="cta-fin-note">Consulta inicial gratuita · Sin compromiso · 100% remoto</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fb-grid">
+      <div><div class="fb-brand">Pensión<span>Segura</span> Colombia</div><p class="fb-desc">Asesoría pensional certificada para colombianos en el exterior. +20 años, +5.000 familias.</p><div style="font-size:13px;color:var(--w40)">📧 contacto@pensionsegura.co</div></div>
+      <div><div class="fb-ch">Servicios</div><div class="fb-links"><a href="#">Diagnóstico</a><a href="#">Corrección</a><a href="#">Reclamaciones</a><a href="#">Traslado</a></div></div>
+      <div><div class="fb-ch">Empresa</div><div class="fb-links"><a href="#">Sobre nosotros</a><a href="#">Proceso</a><a href="#">Testimonios</a><a href="#">Contacto</a></div></div>
+      <div><div class="fb-ch">Legal</div><div class="fb-links"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Datos</a></div></div>
+    </div>
+    <div class="fb-bot"><p>© 2024 PensiónSegura Colombia · Todos los derechos reservados</p><div class="fb-bot-links"><a href="#">Privacidad</a><a href="#">Términos</a></div></div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════════════
+     VARIANTE C — IA CONVERSACIONAL
+════════════════════════════════════ -->
+
+<!-- WA FLOAT -->
+<div class="wa-wrap">
+  <div class="wa-popup" id="waP"><button class="wa-popup-x" onclick="document.getElementById('waP').style.display='none'">✕</button><h4>¿Necesitas asesoría pensional?</h4><p>Escríbenos por WhatsApp, te atendemos de inmediato.</p></div>
+  <button class="wa-btn" onclick="openWhatsApp()"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
+</div>
+
+
+
+
+<!-- ═══════════════════════════════════════════════
+     CONFIGURACIÓN GLOBAL — edita solo este bloque
+     para adaptar a un nuevo cliente en 15 minutos
+════════════════════════════════════════════════ -->
+
+
+<!-- ═══════════════════════════════════════
+     MODAL FORMULARIO 3 PASOS
+════════════════════════════════════════ -->
+<div id="modalOverlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(7,12,24,0.92);backdrop-filter:blur(8px);align-items:center;justify-content:center">
+  <div style="background:#111E30;border:1px solid rgba(201,168,76,0.3);border-radius:20px;padding:44px;width:100%;max-width:500px;margin:20px;position:relative;max-height:90vh;overflow-y:auto">
+    
+    <!-- Cerrar -->
+    <button onclick="closeModal()" style="position:absolute;top:16px;right:18px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;line-height:1">✕</button>
+    
+    <!-- Formulario -->
+    <div id="modalForm">
+      <!-- Dots de progreso -->
+      <div style="display:flex;gap:6px;margin-bottom:28px">
+        <div id="dot1" style="height:4px;border-radius:2px;background:#C9A84C;transition:all .3s;flex:1"></div>
+        <div id="dot2" style="height:4px;border-radius:2px;background:rgba(255,255,255,0.15);transition:all .3s;flex:1"></div>
+        <div id="dot3" style="height:4px;border-radius:2px;background:rgba(255,255,255,0.15);transition:all .3s;flex:1"></div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div id="step1">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:10px">Paso 1 de 3</div>
+        <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:6px">Cuéntanos sobre ti</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:28px;font-weight:300">Tu información es 100% confidencial</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+          <div>
+            <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">Nombre</label>
+            <input id="f_nombre" type="text" placeholder="Tu nombre" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">Apellido</label>
+            <input id="f_apellido" type="text" placeholder="Tu apellido" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+          </div>
+        </div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">País de residencia actual</label>
+          <input id="f_pais" type="text" placeholder="Ej: España, Alemania, Francia..." style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <div style="margin-bottom:28px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">Ciudad</label>
+          <input id="f_ciudad" type="text" placeholder="Ej: Madrid, Barcelona..." style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <button onclick="goToStep(2)" style="width:100%;padding:14px;font-size:15px;font-weight:700;background:#C9A84C;color:#0a0a14;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s" onmouseover="this.style.background='#E8C96D'" onmouseout="this.style.background='#C9A84C'">Siguiente →</button>
+      </div>
+
+      <!-- STEP 2 -->
+      <div id="step2" style="display:none">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:10px">Paso 2 de 3</div>
+        <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:6px">Tu historial pensional</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:28px;font-weight:300">Información aproximada está bien</div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">¿Cuántos años aproximados trabajaste en Colombia?</label>
+          <input id="f_anos" type="number" placeholder="Ej: 12" min="1" max="45" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">¿En qué fondo estás? (si lo sabes)</label>
+          <select id="f_fondo" style="width:100%;padding:11px 14px;background:#111E30;border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+            <option value="">Selecciona una opción</option>
+            <option>Colpensiones</option>
+            <option>Porvenir</option>
+            <option>Protección</option>
+            <option>Colfondos</option>
+            <option>Old Mutual</option>
+            <option>No sé cuál es mi fondo</option>
+          </select>
+        </div>
+        <div style="margin-bottom:28px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">¿Te han negado alguna vez la pensión?</label>
+          <select id="f_negacion" style="width:100%;padding:11px 14px;background:#111E30;border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+            <option value="">Selecciona una opción</option>
+            <option>No, nunca he aplicado</option>
+            <option>Sí, me la negaron una vez</option>
+            <option>Sí, me la negaron varias veces</option>
+            <option>Estoy en proceso ahora</option>
+            <option>No sé cuál es mi estado</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button onclick="goToStep(1)" style="flex:1;padding:14px;font-size:14px;font-weight:600;background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s">← Atrás</button>
+          <button onclick="goToStep(3)" style="flex:2;padding:14px;font-size:15px;font-weight:700;background:#C9A84C;color:#0a0a14;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s" onmouseover="this.style.background='#E8C96D'" onmouseout="this.style.background='#C9A84C'">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div id="step3" style="display:none">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:10px">Paso 3 de 3</div>
+        <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:6px">¿Cómo te contactamos?</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:28px;font-weight:300">Un asesor te contactará en menos de 24h</div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">WhatsApp (con código de país)</label>
+          <input id="f_whatsapp" type="tel" placeholder="+34 XXX XXX XXX" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">Correo electrónico</label>
+          <input id="f_email" type="email" placeholder="tu@correo.com" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <div style="margin-bottom:28px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">¿Cuándo prefieres que te contactemos?</label>
+          <select id="f_horario" style="width:100%;padding:11px 14px;background:#111E30;border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+            <option value="">Selecciona horario preferido</option>
+            <option>Mañana (9:00 – 12:00 CET)</option>
+            <option>Tarde (14:00 – 18:00 CET)</option>
+            <option>Noche (18:00 – 21:00 CET)</option>
+            <option>Cualquier horario</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button onclick="goToStep(2)" style="flex:1;padding:14px;font-size:14px;font-weight:600;background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif">← Atrás</button>
+          <button onclick="submitForm()" style="flex:2;padding:14px;font-size:15px;font-weight:700;background:#C9A84C;color:#0a0a14;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s" onmouseover="this.style.background='#E8C96D'" onmouseout="this.style.background='#C9A84C'">Enviar evaluación ✓</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANTALLA ÉXITO -->
+    <div id="modalSuccess" style="display:none;text-align:center">
+      <div style="font-size:52px;margin-bottom:20px">✅</div>
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:10px">¡Solicitud enviada!</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:28px;font-weight:300">Un asesor te contactará en las próximas <strong style="color:#C9A84C">24 horas</strong> al WhatsApp que indicaste.</div>
+      <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:18px;margin-bottom:24px;text-align:left">
+        <div style="font-size:11px;color:#C9A84C;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Mientras tanto...</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.6">Escríbenos por WhatsApp ahora mismo para una respuesta inmediata, o agenda tu cita directamente en nuestro calendario.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <button onclick="openWhatsAppSuccess()" style="width:100%;padding:13px;font-size:14px;font-weight:700;background:#25D366;color:#fff;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif">💬 Escribir por WhatsApp ahora</button>
+        <button onclick="openCalendar()" style="width:100%;padding:13px;font-size:14px;font-weight:600;background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.2);border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif">📅 Agendar cita en Google Calendar</button>
+        <button onclick="closeModal()" style="width:100%;padding:11px;font-size:13px;font-weight:400;background:transparent;color:rgba(255,255,255,0.4);border:none;cursor:pointer;font-family:'DM Sans',sans-serif">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     WIDGET AGENTE IA
+════════════════════════════════════════ -->
+<div id="iaWidget" style="position:fixed;bottom:28px;left:28px;z-index:9997;display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+  <!-- Chat window -->
+  <div id="iaWindow" style="display:none;width:320px;background:#111E30;border:1px solid rgba(201,168,76,0.3);border-radius:18px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.5)">
+    <!-- Header -->
+    <div style="background:linear-gradient(135deg,#0a0a14,#16253A);padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(201,168,76,0.2)">
+      <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#A07830);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🤖</div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif">Mateo — Asesor IA</div>
+        <div style="display:flex;align-items:center;gap:5px"><div style="width:6px;height:6px;border-radius:50%;background:#25D366"></div><div style="font-size:11px;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif">En línea ahora</div></div>
+      </div>
+      <button onclick="toggleIA()" style="margin-left:auto;background:none;border:none;color:rgba(255,255,255,0.4);font-size:18px;cursor:pointer;line-height:1">✕</button>
+    </div>
+    <!-- Messages -->
+    <div id="iaMessages" style="height:260px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#0D1525">
+      <div class="ia-msg-bot" style="max-width:85%;padding:10px 14px;border-radius:4px 14px 14px 14px;background:#111E30;color:rgba(255,255,255,0.85);font-size:13px;line-height:1.55;font-family:'DM Sans',sans-serif">
+        ¡Hola! Soy Mateo, tu asesor pensional. 👋<br><br>¿Desde qué país me escribes?
+      </div>
+    </div>
+    <!-- Input -->
+    <div style="padding:12px 14px;background:#111E30;border-top:1px solid rgba(255,255,255,0.08);display:flex;gap:8px">
+      <input id="iaInput" type="text" placeholder="Escribe tu mensaje..." onkeydown="if(event.key==='Enter')sendIA()" style="flex:1;padding:9px 13px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;color:#fff;font-size:13px;font-family:'DM Sans',sans-serif;outline:none">
+      <button onclick="sendIA()" style="width:36px;height:36px;border-radius:50%;background:#C9A84C;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0">→</button>
+    </div>
+  </div>
+  <!-- Toggle button -->
+  <button id="iaToggleBtn" onclick="toggleIA()" style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#A07830);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(201,168,76,0.4);transition:transform .2s;font-size:22px" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">🤖</button>
+</div>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT COMPLETO
+════════════════════════════════════════ -->
+
+
+<script>
+// ═══════════════════════════════════════════════
+// CONFIGURACIÓN GLOBAL — edita este bloque para
+// adaptar a un nuevo cliente en 15 minutos
+// ═══════════════════════════════════════════════
+
+const CONFIG = {
+  // ── WhatsApp ──
+  whatsapp: "573001378057",
+  whatsappMsg: "Hola, quiero evaluar mi pensión colombiana. Vengo desde la página web.",
+
+  // ── Google Calendar ──
+  calendarEmail: "gerencialcsproyecto@gmail.com",
+  calendarUrl: "https://calendar.google.com/calendar/appointments/schedules/create?email=gerencialcsproyecto%40gmail.com",
+
+  // ── Airtable (activa pegando tus keys) ──
+  airtableEnabled: false,
+  airtableKey: "TU_AIRTABLE_API_KEY",
+  airtableBase: "TU_AIRTABLE_BASE_ID",
+  airtableTable: "Leads",
+
+  // ── Agente IA (activa pegando tu API key) ──
+  iaEnabled: false,
+  anthropicKey: "TU_ANTHROPIC_API_KEY",
+
+  // ── Prompt del Agente IA (adaptable por cliente) ──
+  agentPrompt: `Eres un asesor pensional experto en Colombia llamado "Mateo". 
+Trabajas para PensiónSegura Colombia, especialistas en ayudar a colombianos en el exterior a recuperar y gestionar su pensión.
+
+PERSONALIDAD: Cercano, profesional, empático. Hablas en español colombiano natural. No usas lenguaje técnico innecesario.
+
+TU OBJETIVO: Calificar al lead, resolver sus dudas y llevarlo a agendar una consulta gratuita.
+
+FLUJO DE CONVERSACIÓN:
+1. Saluda y pregunta desde qué país escribe
+2. Pregunta cuántos años aproximados cotizó en Colombia
+3. Pregunta si sabe en qué fondo está (Colpensiones o privado)
+4. Pregunta si alguna vez le han negado la pensión
+5. Con esa info, da un diagnóstico preliminar positivo y motivador
+6. Ofrece la consulta gratuita y pide su WhatsApp
+
+OBJECIONES COMUNES:
+- "Ya me dijeron que no puedo" → Explica que el 80% de negativas son errores reversibles
+- "Es muy complicado desde el exterior" → Todo es 100% remoto, nunca necesita volver
+- "Cuesta mucho" → La consulta inicial es gratis, el costo se define según el caso
+
+LÍMITES: No inventes cifras exactas. No hagas promesas de resultados específicos. 
+Si preguntan algo muy técnico-legal, di que lo consultará con el equipo especialista.
+
+Responde siempre en máximo 3 líneas. Sé conversacional, no hagas listas largas.`
+};
+
+// ── Función WhatsApp ──
+function openWhatsApp(customMsg) {
+  const msg = customMsg || CONFIG.whatsappMsg;
+  const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+}
+
+// ── Función Google Calendar ──
+function openCalendar() {
+  window.open(CONFIG.calendarUrl, '_blank');
+}
+
+// ── Función guardar lead en Airtable ──
+async function saveLead(data) {
+  if (!CONFIG.airtableEnabled) {
+    console.log('Airtable no activado. Lead:', data);
+    // Guardar en localStorage como respaldo
+    const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+    leads.push({...data, fecha: new Date().toISOString()});
+    localStorage.setItem('leads', JSON.stringify(leads));
+    return true;
+  }
+  try {
+    const res = await fetch(`https://api.airtable.com/v0/${CONFIG.airtableBase}/${CONFIG.airtableTable}`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${CONFIG.airtableKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fields: {
+          'Nombre': data.nombre + ' ' + data.apellido,
+          'WhatsApp': data.whatsapp,
+          'Email': data.email,
+          'Pais': data.pais,
+          'Ciudad': data.ciudad,
+          'Anos Cotizados': data.anos,
+          'Fondo': data.fondo,
+          'Negacion Previa': data.negacion,
+          'Horario': data.horario,
+          'Pension Estimada': data.estimado || '',
+          'Fuente': 'Landing PensiónSegura',
+          'Fecha': new Date().toISOString()
+        }
+      })
+    });
+    return res.ok;
+  } catch(e) {
+    console.error('Airtable error:', e);
+    return false;
+  }
+}
+
+// ── Variables del formulario ──
+let formData = {};
+let currentStep = 1;
+
+
+// ═══════════════════════════════════════════════
+// FUNCIONES PRINCIPALES
+// ═══════════════════════════════════════════════
+
+// ── Modal ──
+function openModal(preData) {
+  document.getElementById('modalOverlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  if (preData) {
+    if (preData.anos) document.getElementById('f_anos').value = preData.anos;
+  }
+  goToStep(1);
+}
+function closeModal() {
+  document.getElementById('modalOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+  document.getElementById('modalForm').style.display = 'block';
+  document.getElementById('modalSuccess').style.display = 'none';
+}
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+function goToStep(n) {
+  currentStep = n;
+  ['step1','step2','step3'].forEach((s,i) => {
+    document.getElementById(s).style.display = (i+1 === n) ? 'block' : 'none';
+  });
+  ['dot1','dot2','dot3'].forEach((d,i) => {
+    document.getElementById(d).style.background = i < n ? '#C9A84C' : 'rgba(255,255,255,0.15)';
+  });
+}
+
+async function submitForm() {
+  const data = {
+    nombre: document.getElementById('f_nombre').value || 'Sin nombre',
+    apellido: document.getElementById('f_apellido').value || '',
+    pais: document.getElementById('f_pais').value || 'No indicado',
+    ciudad: document.getElementById('f_ciudad').value || 'No indicada',
+    anos: document.getElementById('f_anos').value || 'No indicado',
+    fondo: document.getElementById('f_fondo').value || 'No indicado',
+    negacion: document.getElementById('f_negacion').value || 'No indicado',
+    whatsapp: document.getElementById('f_whatsapp').value || 'No indicado',
+    email: document.getElementById('f_email').value || 'No indicado',
+    horario: document.getElementById('f_horario').value || 'Cualquier horario',
+    estimado: document.getElementById('bResult') ? document.getElementById('bResult').textContent : ''
+  };
+  formData = data;
+  await saveLead(data);
+  document.getElementById('modalForm').style.display = 'none';
+  document.getElementById('modalSuccess').style.display = 'block';
+}
+
+function openWhatsAppSuccess() {
+  const msg = `Hola, acabo de completar mi evaluación pensional en la web.
+  
+Mis datos:
+• Nombre: ${formData.nombre} ${formData.apellido}
+• País: ${formData.pais}, ${formData.ciudad}
+• Años cotizados: ${formData.anos}
+• Fondo: ${formData.fondo}
+• Negación previa: ${formData.negacion}
+• Horario preferido: ${formData.horario}
+${formData.estimado ? '• Estimación calculada: ' + formData.estimado : ''}
+
+Quedo en espera de su contacto.`;
+  openWhatsApp(msg);
+}
+
+// ── Agente IA ──
+let iaOpen = false;
+let iaHistory = [];
+let iaTyping = false;
+
+function toggleIA() {
+  iaOpen = !iaOpen;
+  document.getElementById('iaWindow').style.display = iaOpen ? 'block' : 'none';
+  if (iaOpen) document.getElementById('iaInput').focus();
+}
+
+async function sendIA() {
+  if (iaTyping) return;
+  const input = document.getElementById('iaInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  addIAMessage(msg, 'user');
+  iaHistory.push({role:'user', content: msg});
+  showIATyping();
+  if (!CONFIG.iaEnabled) {
+    setTimeout(() => {
+      hideIATyping();
+      const responses = [
+        "Entendido. Con esa información podemos hacer un diagnóstico inicial. ¿Cuántos años aproximados trabajaste en Colombia?",
+        "Perfecto. ¿Sabes en qué fondo tienes tu pensión — Colpensiones o algún fondo privado?",
+        "Gracias por la información. Para darte un diagnóstico más preciso, te recomiendo hablar directamente con nuestro equipo de asesores. ¿Te parece si continuamos por WhatsApp?",
+      ];
+      const r = responses[Math.min(iaHistory.filter(m=>m.role==='user').length - 1, responses.length - 1)];
+      addIAMessage(r, 'bot');
+      iaHistory.push({role:'assistant', content: r});
+      if (iaHistory.filter(m=>m.role==='user').length >= 3) {
+        setTimeout(() => {
+          addIAMessage('', 'cta');
+        }, 800);
+      }
+    }, 1200);
+    return;
+  }
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 300,
+        system: CONFIG.agentPrompt,
+        messages: iaHistory
+      })
+    });
+    const data = await res.json();
+    hideIATyping();
+    const reply = data.content?.[0]?.text || 'Disculpa, hubo un error. ¿Puedo ayudarte por WhatsApp?';
+    addIAMessage(reply, 'bot');
+    iaHistory.push({role:'assistant', content: reply});
+  } catch(e) {
+    hideIATyping();
+    addIAMessage('Por un momento no puedo responder. ¿Continuamos por WhatsApp?', 'bot');
+  }
+}
+
+function addIAMessage(text, type) {
+  const container = document.getElementById('iaMessages');
+  const div = document.createElement('div');
+  if (type === 'user') {
+    div.style.cssText = 'max-width:85%;padding:10px 14px;border-radius:14px 4px 14px 14px;background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.3);color:#fff;font-size:13px;line-height:1.55;font-family:DM Sans,sans-serif;align-self:flex-end;margin-left:auto';
+    div.textContent = text;
+  } else if (type === 'cta') {
+    div.style.cssText = 'display:flex;flex-direction:column;gap:7px;margin-top:4px';
+    div.innerHTML = `
+      <button onclick="openWhatsApp()" style="width:100%;padding:9px;font-size:12px;font-weight:700;background:#25D366;color:#fff;border:none;border-radius:8px;cursor:pointer;font-family:DM Sans,sans-serif">💬 Continuar por WhatsApp</button>
+      <button onclick="openModal()" style="width:100%;padding:9px;font-size:12px;font-weight:600;background:rgba(201,168,76,0.15);color:#C9A84C;border:1px solid rgba(201,168,76,0.3);border-radius:8px;cursor:pointer;font-family:DM Sans,sans-serif">📋 Completar evaluación</button>`;
+  } else {
+    div.style.cssText = 'max-width:85%;padding:10px 14px;border-radius:4px 14px 14px 14px;background:#111E30;color:rgba(255,255,255,0.85);font-size:13px;line-height:1.55;font-family:DM Sans,sans-serif';
+    div.textContent = text;
+  }
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function showIATyping() {
+  iaTyping = true;
+  const container = document.getElementById('iaMessages');
+  const div = document.createElement('div');
+  div.id = 'iaTypingIndicator';
+  div.style.cssText = 'max-width:85%;padding:10px 14px;border-radius:4px 14px 14px 14px;background:#111E30;display:flex;gap:4px;align-items:center';
+  div.innerHTML = `<span style="width:6px;height:6px;border-radius:50%;background:#C9A84C;animation:bounce 1.2s infinite;display:block"></span><span style="width:6px;height:6px;border-radius:50%;background:#C9A84C;animation:bounce 1.2s infinite .2s;display:block"></span><span style="width:6px;height:6px;border-radius:50%;background:#C9A84C;animation:bounce 1.2s infinite .4s;display:block"></span>`;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function hideIATyping() {
+  iaTyping = false;
+  const el = document.getElementById('iaTypingIndicator');
+  if (el) el.remove();
+}
+
+// ── Actualizar todos los CTAs de la página ──
+// CTAs asignados directamente en HTML;
+
+
+// ═══════════════════════════════════════════════
+// LANDING: Parallax, FAQ, Estimador, Reveal
+// ═══════════════════════════════════════════════
+
+
+// FAQ
+function faqToggle(el,t){
+  document.querySelectorAll('.faq-b').forEach(i=>{if(i!==el)i.classList.remove('open')});
+  el.classList.toggle('open');
+}
+
+// HERO B parallax
+window.addEventListener('scroll',()=>{
+  const bg=document.getElementById('hbgB');
+  if(bg) bg.style.transform=`scale(1.05) translateY(${scrollY*0.2}px)`;
+  if(scrollY>400) document.getElementById('waP').style.display='none';
+});
+
+// ESTIMADORES
+const sals=[1e6,1.5e6,2e6,2.5e6,3e6,4e6,5e6,6e6,8e6,10e6];
+function fmtCOP(n){return '$'+Math.round(n).toLocaleString('es-CO')}
+function calcPension(y,si){return sals[si]*0.65*(Math.min(y,25)/25)}
+
+function calcB(){
+  const y=+document.getElementById('byRange').value;
+  const si=+document.getElementById('bsRange').value-1;
+  document.getElementById('byVal').textContent=y;
+  document.getElementById('bsVal').textContent=fmtCOP(sals[si]);
+  document.getElementById('bResult').textContent=fmtCOP(calcPension(y,si));
+}
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}});
+},{threshold:0.08});
+document.querySelectorAll('.lc,.ben-b,.pc-b,.svc-b,.step-b,.met-card,.ext-case-b').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(18px)';
+  el.style.transition='opacity .5s ease, transform .5s ease';
+  obs.observe(el);
+});
+
+</script>
+</body>
+</html>
