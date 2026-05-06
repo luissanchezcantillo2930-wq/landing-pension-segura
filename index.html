@@ -482,7 +482,10 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0a;color:var(--w);overflow
 .wa-btn{width:52px;height:52px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.45);transition:transform .2s}
 .wa-btn:hover{transform:scale(1.1)}
 .wa-btn svg{width:25px;height:25px;fill:#fff}
+
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 </style>
+
 </head>
 <body>
 
@@ -490,7 +493,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0a;color:var(--w);overflow
   <nav class="nav">
     <div class="logo-b"><div class="logo-gem-b">PS</div><div class="logo-text-b">Pensión<span>Segura</span></div></div>
     <div class="nav-links-b"><a href="#">Servicios</a><a href="#">Proceso</a><a href="#">Testimonios</a><a href="#">Contacto</a></div>
-    <button class="nav-cta-b">Consulta Ahora</button>
+    <button class="nav-cta-b" onclick="openModal()">Consulta Ahora</button>
   </nav>
 
   <section class="hero-b">
@@ -503,8 +506,8 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0a;color:var(--w);overflow
       <h1>Descubre si puedes<br>pensionarte en<br>Colombia, <em>incluso<br>viviendo en España</em></h1>
       <p class="hero-b-sub">Analizamos tu historial laboral, te decimos cuánto podrías recibir y te guiamos paso a paso para lograr tu pensión sin errores.</p>
       <div class="hero-b-btns">
-        <button class="btn-pb">🔍 Evaluar mi pensión ahora</button>
-        <button class="btn-sb">💬 Hablar por WhatsApp</button>
+        <button class="btn-pb" onclick="openModal()">🔍 Evaluar mi pensión ahora</button>
+        <button class="btn-sb" onclick="openWhatsApp()">💬 Hablar por WhatsApp</button>
       </div>
       <div class="trust-b">
         <div class="tb-item"><span class="tb-num">+5.000</span><span class="tb-lbl">Colombianos asesorados</span></div>
@@ -650,7 +653,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0a;color:var(--w);overflow
       <div class="est-row"><div class="est-lbl">Años cotizados en Colombia: <span id="byVal" style="color:var(--gold);font-weight:700">15</span></div><input type="range" class="est-range" min="5" max="35" value="15" id="byRange" oninput="calcB()"></div>
       <div class="est-row"><div class="est-lbl">Salario promedio: <span id="bsVal" style="color:var(--gold);font-weight:700">$2.000.000</span></div><input type="range" class="est-range" min="1" max="10" value="4" id="bsRange" oninput="calcB()"></div>
       <div class="est-result-b"><div class="est-rt">Tu pensión mensual estimada podría ser:</div><div class="est-rn" id="bResult">$1.380.000</div></div>
-      <button class="btn-pb" style="width:100%;justify-content:center">Obtener mi diagnóstico real →</button>
+      <button class="btn-pb" style="width:100%;justify-content:center" onclick="openModal()">Obtener mi diagnóstico real →</button>
       <div style="font-size:12px;color:var(--w40);margin-top:12px;text-align:center">Estimación orientativa. El diagnóstico real puede revelar semanas adicionales no contabilizadas.</div>
     </div>
   </section>
@@ -707,8 +710,8 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0a;color:var(--w);overflow
       <h2 style="font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--w);letter-spacing:-1px;margin-bottom:20px">Tu pensión colombiana<br><em style="font-style:italic;color:var(--gold)">te está esperando</em></h2>
       <p style="font-size:18px;color:var(--w60);max-width:480px;margin:0 auto 48px;font-weight:300;line-height:1.7">Miles de colombianos en España ya aseguraron la suya. No dejes pasar otro año.</p>
       <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
-        <button class="btn-pb" style="font-size:16px;padding:16px 32px">🔍 Evaluar mi pensión ahora</button>
-        <button class="btn-sb" style="font-size:16px;padding:16px 28px">💬 WhatsApp</button>
+        <button class="btn-pb" style="font-size:16px;padding:16px 32px" onclick="openModal()">🔍 Evaluar mi pensión ahora</button>
+        <button class="btn-sb" style="font-size:16px;padding:16px 28px" onclick="openWhatsApp()">💬 WhatsApp</button>
       </div>
       <div class="cta-fin-note">Consulta inicial gratuita · Sin compromiso · 100% remoto</div>
     </div>
@@ -732,16 +735,451 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0a;color:var(--w);overflow
 <!-- WA FLOAT -->
 <div class="wa-wrap">
   <div class="wa-popup" id="waP"><button class="wa-popup-x" onclick="document.getElementById('waP').style.display='none'">✕</button><h4>¿Necesitas asesoría pensional?</h4><p>Escríbenos por WhatsApp, te atendemos de inmediato.</p></div>
-  <button class="wa-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
+  <button class="wa-btn" onclick="openWhatsApp()"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
 </div>
 
+
+
+
+<!-- ═══════════════════════════════════════════════
+     CONFIGURACIÓN GLOBAL — edita solo este bloque
+     para adaptar a un nuevo cliente en 15 minutos
+════════════════════════════════════════════════ -->
+
+
+<!-- ═══════════════════════════════════════
+     MODAL FORMULARIO 3 PASOS
+════════════════════════════════════════ -->
+<div id="modalOverlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(7,12,24,0.92);backdrop-filter:blur(8px);align-items:center;justify-content:center">
+  <div style="background:#111E30;border:1px solid rgba(201,168,76,0.3);border-radius:20px;padding:44px;width:100%;max-width:500px;margin:20px;position:relative;max-height:90vh;overflow-y:auto">
+    
+    <!-- Cerrar -->
+    <button onclick="closeModal()" style="position:absolute;top:16px;right:18px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:22px;cursor:pointer;line-height:1">✕</button>
+    
+    <!-- Formulario -->
+    <div id="modalForm">
+      <!-- Dots de progreso -->
+      <div style="display:flex;gap:6px;margin-bottom:28px">
+        <div id="dot1" style="height:4px;border-radius:2px;background:#C9A84C;transition:all .3s;flex:1"></div>
+        <div id="dot2" style="height:4px;border-radius:2px;background:rgba(255,255,255,0.15);transition:all .3s;flex:1"></div>
+        <div id="dot3" style="height:4px;border-radius:2px;background:rgba(255,255,255,0.15);transition:all .3s;flex:1"></div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div id="step1">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:10px">Paso 1 de 3</div>
+        <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:6px">Cuéntanos sobre ti</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:28px;font-weight:300">Tu información es 100% confidencial</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+          <div>
+            <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">Nombre</label>
+            <input id="f_nombre" type="text" placeholder="Tu nombre" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">Apellido</label>
+            <input id="f_apellido" type="text" placeholder="Tu apellido" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+          </div>
+        </div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">País de residencia actual</label>
+          <input id="f_pais" type="text" placeholder="Ej: España, Alemania, Francia..." style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <div style="margin-bottom:28px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">Ciudad</label>
+          <input id="f_ciudad" type="text" placeholder="Ej: Madrid, Barcelona..." style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <button onclick="goToStep(2)" style="width:100%;padding:14px;font-size:15px;font-weight:700;background:#C9A84C;color:#0a0a14;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s" onmouseover="this.style.background='#E8C96D'" onmouseout="this.style.background='#C9A84C'">Siguiente →</button>
+      </div>
+
+      <!-- STEP 2 -->
+      <div id="step2" style="display:none">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:10px">Paso 2 de 3</div>
+        <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:6px">Tu historial pensional</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:28px;font-weight:300">Información aproximada está bien</div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">¿Cuántos años aproximados trabajaste en Colombia?</label>
+          <input id="f_anos" type="number" placeholder="Ej: 12" min="1" max="45" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">¿En qué fondo estás? (si lo sabes)</label>
+          <select id="f_fondo" style="width:100%;padding:11px 14px;background:#111E30;border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+            <option value="">Selecciona una opción</option>
+            <option>Colpensiones</option>
+            <option>Porvenir</option>
+            <option>Protección</option>
+            <option>Colfondos</option>
+            <option>Old Mutual</option>
+            <option>No sé cuál es mi fondo</option>
+          </select>
+        </div>
+        <div style="margin-bottom:28px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">¿Te han negado alguna vez la pensión?</label>
+          <select id="f_negacion" style="width:100%;padding:11px 14px;background:#111E30;border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+            <option value="">Selecciona una opción</option>
+            <option>No, nunca he aplicado</option>
+            <option>Sí, me la negaron una vez</option>
+            <option>Sí, me la negaron varias veces</option>
+            <option>Estoy en proceso ahora</option>
+            <option>No sé cuál es mi estado</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button onclick="goToStep(1)" style="flex:1;padding:14px;font-size:14px;font-weight:600;background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s">← Atrás</button>
+          <button onclick="goToStep(3)" style="flex:2;padding:14px;font-size:15px;font-weight:700;background:#C9A84C;color:#0a0a14;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s" onmouseover="this.style.background='#E8C96D'" onmouseout="this.style.background='#C9A84C'">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div id="step3" style="display:none">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#C9A84C;text-transform:uppercase;margin-bottom:10px">Paso 3 de 3</div>
+        <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:6px">¿Cómo te contactamos?</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:28px;font-weight:300">Un asesor te contactará en menos de 24h</div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">WhatsApp (con código de país)</label>
+          <input id="f_whatsapp" type="tel" placeholder="+34 XXX XXX XXX" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">Correo electrónico</label>
+          <input id="f_email" type="email" placeholder="tu@correo.com" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+        </div>
+        <div style="margin-bottom:28px">
+          <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);display:block;margin-bottom:6px">¿Cuándo prefieres que te contactemos?</label>
+          <select id="f_horario" style="width:100%;padding:11px 14px;background:#111E30;border:1px solid rgba(255,255,255,0.15);border-radius:9px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(201,168,76,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+            <option value="">Selecciona horario preferido</option>
+            <option>Mañana (9:00 – 12:00 CET)</option>
+            <option>Tarde (14:00 – 18:00 CET)</option>
+            <option>Noche (18:00 – 21:00 CET)</option>
+            <option>Cualquier horario</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button onclick="goToStep(2)" style="flex:1;padding:14px;font-size:14px;font-weight:600;background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif">← Atrás</button>
+          <button onclick="submitForm()" style="flex:2;padding:14px;font-size:15px;font-weight:700;background:#C9A84C;color:#0a0a14;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s" onmouseover="this.style.background='#E8C96D'" onmouseout="this.style.background='#C9A84C'">Enviar evaluación ✓</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANTALLA ÉXITO -->
+    <div id="modalSuccess" style="display:none;text-align:center">
+      <div style="font-size:52px;margin-bottom:20px">✅</div>
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:10px">¡Solicitud enviada!</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:28px;font-weight:300">Un asesor te contactará en las próximas <strong style="color:#C9A84C">24 horas</strong> al WhatsApp que indicaste.</div>
+      <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:18px;margin-bottom:24px;text-align:left">
+        <div style="font-size:11px;color:#C9A84C;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Mientras tanto...</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.6">Escríbenos por WhatsApp ahora mismo para una respuesta inmediata, o agenda tu cita directamente en nuestro calendario.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <button onclick="openWhatsAppSuccess()" style="width:100%;padding:13px;font-size:14px;font-weight:700;background:#25D366;color:#fff;border:none;border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif">💬 Escribir por WhatsApp ahora</button>
+        <button onclick="openCalendar()" style="width:100%;padding:13px;font-size:14px;font-weight:600;background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.2);border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif">📅 Agendar cita en Google Calendar</button>
+        <button onclick="closeModal()" style="width:100%;padding:11px;font-size:13px;font-weight:400;background:transparent;color:rgba(255,255,255,0.4);border:none;cursor:pointer;font-family:'DM Sans',sans-serif">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     WIDGET AGENTE IA
+════════════════════════════════════════ -->
+<div id="iaWidget" style="position:fixed;bottom:28px;left:28px;z-index:9997;display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+  <!-- Chat window -->
+  <div id="iaWindow" style="display:none;width:320px;background:#111E30;border:1px solid rgba(201,168,76,0.3);border-radius:18px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.5)">
+    <!-- Header -->
+    <div style="background:linear-gradient(135deg,#0a0a14,#16253A);padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(201,168,76,0.2)">
+      <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#A07830);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🤖</div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif">Mateo — Asesor IA</div>
+        <div style="display:flex;align-items:center;gap:5px"><div style="width:6px;height:6px;border-radius:50%;background:#25D366"></div><div style="font-size:11px;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif">En línea ahora</div></div>
+      </div>
+      <button onclick="toggleIA()" style="margin-left:auto;background:none;border:none;color:rgba(255,255,255,0.4);font-size:18px;cursor:pointer;line-height:1">✕</button>
+    </div>
+    <!-- Messages -->
+    <div id="iaMessages" style="height:260px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#0D1525">
+      <div class="ia-msg-bot" style="max-width:85%;padding:10px 14px;border-radius:4px 14px 14px 14px;background:#111E30;color:rgba(255,255,255,0.85);font-size:13px;line-height:1.55;font-family:'DM Sans',sans-serif">
+        ¡Hola! Soy Mateo, tu asesor pensional. 👋<br><br>¿Desde qué país me escribes?
+      </div>
+    </div>
+    <!-- Input -->
+    <div style="padding:12px 14px;background:#111E30;border-top:1px solid rgba(255,255,255,0.08);display:flex;gap:8px">
+      <input id="iaInput" type="text" placeholder="Escribe tu mensaje..." onkeydown="if(event.key==='Enter')sendIA()" style="flex:1;padding:9px 13px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;color:#fff;font-size:13px;font-family:'DM Sans',sans-serif;outline:none">
+      <button onclick="sendIA()" style="width:36px;height:36px;border-radius:50%;background:#C9A84C;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0">→</button>
+    </div>
+  </div>
+  <!-- Toggle button -->
+  <button id="iaToggleBtn" onclick="toggleIA()" style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#A07830);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(201,168,76,0.4);transition:transform .2s;font-size:22px" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">🤖</button>
+</div>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT COMPLETO
+════════════════════════════════════════ -->
+
+
+
 <script>
-// TABS
+
+// // 
+// CONFIGURACIN GLOBAL  edita este bloque para
+// adaptar a un nuevo cliente en 15 minutos
+// // 
+
+const CONFIG = {
+  //  WhatsApp 
+  whatsapp: "573001378057",
+  whatsappMsg: "Hola, quiero evaluar mi pensión colombiana. Vengo desde la página web.",
+
+  //  Google Calendar 
+  calendarEmail: "gerencialcsproyecto@gmail.com",
+  calendarUrl: "https://calendar.google.com/calendar/appointments/schedules/createemail=gerencialcsproyecto%40gmail.com",
+
+  //  Airtable (activa pegando tus keys) 
+  airtableEnabled: false,
+  airtableKey: "TU_AIRTABLE_API_KEY",
+  airtableBase: "TU_AIRTABLE_BASE_ID",
+  airtableTable: "Leads",
+
+  //  Agente IA (activa pegando tu API key) 
+  iaEnabled: false,
+  anthropicKey: "TU_ANTHROPIC_API_KEY",
+
+  //  Prompt del Agente IA (adaptable por cliente) 
+  agentPrompt: "Eres Mateo, asesor pensional de PensionSegura Colombia. Ayudas a colombianos en el exterior a recuperar su pension colombiana. Eres cercano, profesional y empatico. Tu objetivo es calificar al lead y llevarlo a agendar una consulta gratuita. Sigue este flujo: 1) Pregunta desde que pais escribe. 2) Pregunta cuantos anos cotizo. 3) Pregunta en que fondo esta. 4) Pregunta si le han negado la pension. 5) Da un diagnostico positivo y ofrece la consulta gratis. Responde en maximo 3 lineas cortas."
+};
+
+//  Funcin WhatsApp 
+function openWhatsApp(customMsg) {
+  const msg = customMsg || CONFIG.whatsappMsg;
+  const url = `https://wa.me/${CONFIG.whatsapp}text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+}
+
+//  Funcin Google Calendar 
+function openCalendar() {
+  window.open(CONFIG.calendarUrl, '_blank');
+}
+
+//  Funcin guardar lead en Airtable 
+async function saveLead(data) {
+  if (!CONFIG.airtableEnabled) {
+    console.log('Airtable no activado. Lead:', data);
+    // Guardar en localStorage como respaldo
+    const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+    leads.push({...data, fecha: new Date().toISOString()});
+    localStorage.setItem('leads', JSON.stringify(leads));
+    return true;
+  }
+  try {
+    const res = await fetch(`https://api.airtable.com/v0/${CONFIG.airtableBase}/${CONFIG.airtableTable}`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${CONFIG.airtableKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fields: {
+          'Nombre': data.nombre + ' ' + data.apellido,
+          'WhatsApp': data.whatsapp,
+          'Email': data.email,
+          'Pais': data.pais,
+          'Ciudad': data.ciudad,
+          'Anos Cotizados': data.anos,
+          'Fondo': data.fondo,
+          'Negacion Previa': data.negacion,
+          'Horario': data.horario,
+          'Pension Estimada': data.estimado || '',
+          'Fuente': 'Landing PensiónSegura',
+          'Fecha': new Date().toISOString()
+        }
+      })
+    });
+    return res.ok;
+  } catch(e) {
+    console.error('Airtable error:', e);
+    return false;
+  }
+}
+
+//  Variables del formulario 
+let formData = {};
+let currentStep = 1;
+
+
+// // 
+// FUNCIONES PRINCIPALES
+// 
+
+//  Modal 
+function openModal(preData) {
+  document.getElementById('modalOverlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  if (preData) {
+    if (preData.anos) document.getElementById('f_anos').value = preData.anos;
+  }
+  goToStep(1);
+}
+function closeModal() {
+  document.getElementById('modalOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+  document.getElementById('modalForm').style.display = 'block';
+  document.getElementById('modalSuccess').style.display = 'none';
+}
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+function goToStep(n) {
+  currentStep = n;
+  ['step1','step2','step3'].forEach((s,i) => {
+    document.getElementById(s).style.display = (i+1 === n) ? 'block' : 'none';
+  });
+  ['dot1','dot2','dot3'].forEach((d,i) => {
+    document.getElementById(d).style.background = i < n ? '#C9A84C' : 'rgba(255,255,255,0.15)';
+  });
+}
+
+async function submitForm() {
+  const data = {
+    nombre: document.getElementById('f_nombre').value || 'Sin nombre',
+    apellido: document.getElementById('f_apellido').value || '',
+    pais: document.getElementById('f_pais').value || 'No indicado',
+    ciudad: document.getElementById('f_ciudad').value || 'No indicada',
+    anos: document.getElementById('f_anos').value || 'No indicado',
+    fondo: document.getElementById('f_fondo').value || 'No indicado',
+    negacion: document.getElementById('f_negacion').value || 'No indicado',
+    whatsapp: document.getElementById('f_whatsapp').value || 'No indicado',
+    email: document.getElementById('f_email').value || 'No indicado',
+    horario: document.getElementById('f_horario').value || 'Cualquier horario',
+    estimado: document.getElementById('bResult') ? document.getElementById('bResult').textContent : ''
+  };
+  formData = data;
+  await saveLead(data);
+  document.getElementById('modalForm').style.display = 'none';
+  document.getElementById('modalSuccess').style.display = 'block';
+}
+
+function openWhatsAppSuccess() {
+  const msg = `Hola, acabo de completar mi evaluación pensional en la web.
+  
+Mis datos:
+* Nombre: ${formData.nombre} ${formData.apellido}
+* País: ${formData.pais}, ${formData.ciudad}
+* Años cotizados: ${formData.anos}
+* Fondo: ${formData.fondo}
+* Negación previa: ${formData.negacion}
+* Horario preferido: ${formData.horario}
+${formData.estimado ? '* Estimación calculada: ' + formData.estimado : ''}
+
+Quedo en espera de su contacto.`;
+  openWhatsApp(msg);
+}
+
+//  Agente IA 
+let iaOpen = false;
+let iaHistory = [];
+let iaTyping = false;
+
+function toggleIA() {
+  iaOpen = !iaOpen;
+  document.getElementById('iaWindow').style.display = iaOpen ? 'block' : 'none';
+  if (iaOpen) document.getElementById('iaInput').focus();
+}
+
+async function sendIA() {
+  if (iaTyping) return;
+  const input = document.getElementById('iaInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  addIAMessage(msg, 'user');
+  iaHistory.push({role:'user', content: msg});
+  showIATyping();
+  if (!CONFIG.iaEnabled) {
+    setTimeout(() => {
+      hideIATyping();
+      const responses = [
+        "Entendido. Con esa información podemos hacer un diagnóstico inicial. ¿Cuántos años aproximados trabajaste en Colombia?",
+        "Perfecto. ¿Sabes en qué fondo tienes tu pensión - Colpensiones o algún fondo privado?",
+        "Gracias por la información. Para darte un diagnóstico más preciso, te recomiendo hablar directamente con nuestro equipo de asesores. ¿Te parece si continuamos por WhatsApp?",
+      ];
+      const r = responses[Math.min(iaHistory.filter(m=>m.role==='user').length - 1, responses.length - 1)];
+      addIAMessage(r, 'bot');
+      iaHistory.push({role:'assistant', content: r});
+      if (iaHistory.filter(m=>m.role==='user').length >= 3) {
+        setTimeout(() => {
+          addIAMessage('', 'cta');
+        }, 800);
+      }
+    }, 1200);
+    return;
+  }
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 300,
+        system: CONFIG.agentPrompt,
+        messages: iaHistory
+      })
+    });
+    const data = await res.json();
+    hideIATyping();
+    const reply = data.content?.[0]?.text || 'Disculpa, hubo un error. ¿Puedo ayudarte por WhatsApp?';
+    addIAMessage(reply, 'bot');
+    iaHistory.push({role:'assistant', content: reply});
+  } catch(e) {
+    hideIATyping();
+    addIAMessage('Por un momento no puedo responder. ¿Continuamos por WhatsApp?', 'bot');
+  }
+}
+
+function addIAMessage(text, type) {
+  const container = document.getElementById('iaMessages');
+  const div = document.createElement('div');
+  if (type === 'user') {
+    div.style.cssText = 'max-width:85%;padding:10px 14px;border-radius:14px 4px 14px 14px;background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.3);color:#fff;font-size:13px;line-height:1.55;font-family:DM Sans,sans-serif;align-self:flex-end;margin-left:auto';
+    div.textContent = text;
+  } else if (type === 'cta') {
+    div.style.cssText = 'display:flex;flex-direction:column;gap:7px;margin-top:4px';
+    div.innerHTML = `
+      <button onclick="openWhatsApp()" style="width:100%;padding:9px;font-size:12px;font-weight:700;background:#25D366;color:#fff;border:none;border-radius:8px;cursor:pointer;font-family:DM Sans,sans-serif"> Continuar por WhatsApp</button>
+      <button onclick="openModal()" style="width:100%;padding:9px;font-size:12px;font-weight:600;background:rgba(201,168,76,0.15);color:#C9A84C;border:1px solid rgba(201,168,76,0.3);border-radius:8px;cursor:pointer;font-family:DM Sans,sans-serif"> Completar evaluación</button>`;
+  } else {
+    div.style.cssText = 'max-width:85%;padding:10px 14px;border-radius:4px 14px 14px 14px;background:#111E30;color:rgba(255,255,255,0.85);font-size:13px;line-height:1.55;font-family:DM Sans,sans-serif';
+    div.textContent = text;
+  }
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function showIATyping() {
+  iaTyping = true;
+  const container = document.getElementById('iaMessages');
+  const div = document.createElement('div');
+  div.id = 'iaTypingIndicator';
+  div.style.cssText = 'max-width:85%;padding:10px 14px;border-radius:4px 14px 14px 14px;background:#111E30;display:flex;gap:4px;align-items:center';
+  div.innerHTML = `<span style="width:6px;height:6px;border-radius:50%;background:#C9A84C;animation:bounce 1.2s infinite;display:block"></span><span style="width:6px;height:6px;border-radius:50%;background:#C9A84C;animation:bounce 1.2s infinite .2s;display:block"></span><span style="width:6px;height:6px;border-radius:50%;background:#C9A84C;animation:bounce 1.2s infinite .4s;display:block"></span>`;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function hideIATyping() {
+  iaTyping = false;
+  const el = document.getElementById('iaTypingIndicator');
+  if (el) el.remove();
+}
+
+//  Actualizar todos los CTAs de la pgina 
+// CTAs asignados directamente en HTML;
+
+
+// // 
+// LANDING: Parallax, FAQ, Estimador, Reveal
+// 
+
 
 // FAQ
 function faqToggle(el,t){
-  const sel=t==='a'?'.faq-i':t==='b'?'.faq-b':'.faqc-item';
-  document.querySelectorAll(sel).forEach(i=>{if(i!==el)i.classList.remove('open')});
+  document.querySelectorAll('.faq-b').forEach(i=>{if(i!==el)i.classList.remove('open')});
   el.classList.toggle('open');
 }
 
@@ -769,11 +1207,13 @@ function calcB(){
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}});
 },{threshold:0.08});
+document.querySelectorAll('.lc,.ben-b,.pc-b,.svc-b,.step-b,.met-card,.ext-case-b').forEach(el=>{
   el.style.opacity='0';el.style.transform='translateY(18px)';
   el.style.transition='opacity .5s ease, transform .5s ease';
   obs.observe(el);
 });
-</script>
 
+
+</script>
 </body>
 </html>
